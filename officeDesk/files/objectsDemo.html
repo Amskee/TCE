@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+* {
+	font-size: 24px;
+	line-height: 40px;
+}
+</style>
+<script>
+//objects
+
+var Student = function(name, email, gpa, cgpa) {
+	this.name = name;
+	this.email = email;
+	this.gpa = gpa;
+	this.doc = Date.now();
+};
+
+Student.prototype.changeGpa = function(gpa) {
+	this.gpa = gpa;
+};
+
+Student.prototype.dispNum = function() {
+	var gpa = this.gpa;
+	document.writeln("<b>Number functions</b><br>");
+	document.writeln("To fixed(2): " + gpa.toFixed(2) + '<br>' );
+	document.writeln("To local string: " + gpa.toLocaleString() + '<br>' );
+	document.writeln("To percision(2): " + gpa.toPrecision(2) + '<br>' );
+	document.writeln("To string: " + gpa.toString() + '<br>' );
+	document.writeln("To string bin: " + gpa.toString(2) + '<br>' );
+	document.writeln("To string oct: " + gpa.toString(8) + '<br>' );
+	document.writeln("To string hex: " + gpa.toString(16) + '<br>' );
+};
+
+Student.prototype.dispStr = function() {
+	var name = this.name;
+	document.writeln("<b>String functions</b><br>");
+	document.writeln("Char at 2: " + name.charAt(2) + '<br>' );
+	document.writeln("Char code at 2: " + name.charCodeAt(2) + '<br>' );
+	document.writeln("index of : " + name.indexOf("raj", 0) + '<br>' );
+	document.writeln("last index of : " + name.lastIndexOf("raj", 0) + '<br>' );
+	document.writeln("slice(2,5): " + name.slice(2,5) + '<br>' );
+	document.writeln("split: " + name.split() + '<br>' );
+	document.writeln("substr: " + name.substr("raj", 10) + '<br>' );
+};
+
+Student.prototype.dispDat = function() {
+	var dt = new Date(Date.now());
+	document.writeln("<b>Date functions for "+ dt + "</b><br>");
+	document.writeln("dt hours: " +dt.getHours() + '<br>' );
+	document.writeln("dt day: " +dt.getDay() + '<br>' );
+	document.writeln("dt ms: " +dt.getMilliseconds() + '<br>' );
+	document.writeln("dt year: " +dt.getFullYear() + '<br>' );
+};
+
+Student.prototype.dispMat = function() {
+	var a = 5; var b = 3;
+	document.writeln("<b>Math functions</b><br>");
+	document.writeln("Math max: " + Math.max(a,b) + '<br>' );
+	document.writeln("Math min: " + Math.min(a,b) + '<br>' );
+	document.writeln("Math pow: " + Math.pow(a,b) + '<br>' );
+	document.writeln("Math round: " + Math.max(a) + '<br>' );
+	document.writeln("Math sin: " + Math.sin(a) + '<br>' );
+};
+
+
+var stu = new Student("Raj raju", "raj@gmail.com", 9.89987);
+
+document.writeln("<b>User define object</b><br>");
+document.writeln("<u>Student Object</u>" + "<br>");
+document.writeln("Name: " + stu.name + "<br>");
+document.writeln("E-mail: " + stu.email + "<br>");
+document.writeln("gpa: " + stu.gpa + "<br>");
+
+stu.dispStr();
+stu.dispMat();
+stu.dispDat();
+stu.dispNum();
+
+
+</script>
+</body>
+</html>

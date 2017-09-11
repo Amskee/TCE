@@ -1,0 +1,70 @@
+announcement {
+	width: 99%;
+}
+
+title {
+	width: 100%;
+	font-size: 36px;
+	text-align: center;
+	font-weight: bold;
+}
+
+card {
+	width: 100%;
+	background-color: #fafafa;
+	display: block;
+	border: 0.5px grey solid;
+	margin: 10px 5px;
+}
+
+head {
+	font-size: 36px;
+	color: black;
+	height: 50px;
+	text-align: center;
+	width: 100%;
+	background-color: #e3dbdb;
+}
+
+description {
+	width: 100%;
+	color: black;
+	font-size: 24px;
+}
+
+content {
+	margin: 10px auto;
+	width: 80%;
+
+}
+
+timeslots {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+	width: 30%;
+}
+
+slot {
+	background-color: yellow;
+	margin: 5px;
+}
+
+signature {
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 28px !important;
+	font-style: italic;
+}
+
+content-image {
+	background-image: url("../img/Home.JPG");
+	width: 99%;
+	height: 511px;
+}
+
+
+* {
+	display: block;
+}

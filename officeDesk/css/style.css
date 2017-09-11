@@ -1,0 +1,110 @@
+#head1 {
+	background-color: #8c046e;
+	height: 125px;
+}
+
+
+#tce {
+	font-family: roboto;
+	color: white;
+	margin-top: 40px;
+	font-size: 30px;
+}
+
+
+#sidenav {
+	background-color: #e460c6;
+	min-width: 50px;
+	height: 500px;
+	margin-top: 20px;
+	margin-left: 10px;	
+}
+
+
+#navcon {
+	color: white;
+	font-size: 25px;
+	margin-top: 0px; 
+	text-align: left;
+	margin-left: 40px;	
+	padding-left: 20px;
+}
+
+
+#titles {
+	font-family: Pacifico;
+	margin-top: 30px;
+	font-size: 40px;
+	color: #6d6a6d;
+}
+
+
+#offimg {
+	width: 250px;
+	height: 200px;
+	border-radius: 15px;
+}
+
+
+#desc {
+	font-size: 20px;
+	color: black;
+}
+
+
+#foot {
+	background-color: #8c046e;
+	height: 75px;
+}
+
+
+#copy
+{
+	margin-top: 10px;
+	color: white;
+	margin-bottom: 0px;
+	margin-left: 10px;
+}
+
+
+#icons {
+	width: 200px;
+	height: 50px;
+}
+
+
+#navcon:hover {
+	background-color: #8c046e;
+}
+
+.highlighted {
+	background-color: yellow;
+	color: black !important;
+}
+
+
+.reg-form {
+	width: 700px;
+	margin: 0 auto;
+
+}
+
+
+.form-head {
+	margin: 20px 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 32px;
+}
+
+.dum-btn {
+	border: 1px solid black;
+	width: 70px;
+	padding: 5px;
+	background-color: #fafafa;
+	text-align: center;
+}
+
+.anim {
+	transition: all .2s ease-in-out;
+}

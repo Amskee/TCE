@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/noticeStyle.css"?>
+<announcement>
+  <card>
+    <title>Announcements</title>
+  </card>
+  <card>
+    <head>TCE Examinations office times</head>
+    <content>
+      <description>For the mutual convenience, the following time slots, on all working days, are available for the students, private students, alumni and parents for any transactions including getting/submission of forms/requests, refunds, queries, transcripts, certificates.</description>
+      <timeslots>
+        <slot>10:45 AM - 11:30 AM</slot>
+        <slot>1:45 PM - 02:30 PM</slot>
+        <slot>03:45 PM - 04:30 PM</slot>
+        </timeslots>
+      <signature>-COE</signature>
+    </content>
+  </card>
+  <card>
+    <head>OFFICE DESK</head>
+    <content>
+      <description>Office desk is a office data management website under construction by IT students of TCE. The website is soon to be implemented in real time in association with the TCE college office.</description>
+      <content>
+        <content-image>
+        </content-image>
+      </content>
+      <signature>Amskee, Mahesh, Avinash.</signature>
+    </content>
+  </card>
+</announcement>
