@@ -1,2 +1,2 @@
 # TCE
-College Mini Projects
+Test projects for College assignments.
