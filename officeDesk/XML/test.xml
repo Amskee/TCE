@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<users>
+ <user>
+  <userName>amskee</userName>
+  <RollNo>15IT008</RollNo>
+  <Email>amskee@gmail.com</Email>
+  <Phone>8888888888</Phone>
+ </user>
+ <user>
+  <userName>hari</userName>
+  <RollNo>15IT033</RollNo>
+  <Email>hari@gmail.com</Email>
+  <Phone>8888888888</Phone>
+ </user>
+ <user>
+  <userName>Mahesh</userName>
+  <RollNo>15IT048</RollNo>
+  <Email>mahesh@gmail.com</Email>
+  <Phone>8888888888</Phone>
+ </user>
+</users>

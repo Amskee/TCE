@@ -1,0 +1,152 @@
+ <!DOCTYPE html>
+<html>
+<body>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #32363c;	
+	color: #5f6062;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+#pricing-table {
+	-webkit-box-shadow: 0px 0px 3px #26292e;
+	box-shadow: 0px 0px 3px #26292e;
+	margin: 10px auto;
+	width: 250px;
+}
+
+#pricing-table #pricing-table-header {
+	background: #65707f; /* Old browsers */
+	background: -moz-linear-gradient(top,  #65707f 0%, #4a5564 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#65707f), color-stop(100%,#4a5564)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #65707f 0%,#4a5564 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #65707f 0%,#4a5564 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #65707f 0%,#4a5564 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #65707f 0%,#4a5564 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65707f', endColorstr='#4a5564',GradientType=0 ); /* IE6-9 */
+	background-color: #586272;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+	padding: 16px;
+	text-align: center;	
+}
+
+#pricing-table #pricing-table-header h1 {
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+#pricing-table #pricing-table-content {
+	background-color: #fff;
+}
+
+#pricing-table #pricing-table-content ul {
+	list-style: none;	
+}
+
+#pricing-table #pricing-table-content ul li {
+	border-bottom: 1px solid #efeff0;
+	font-size: 14px;
+	padding: 16px 56px;
+}
+
+#pricing-table #pricing-table-footer {
+	background-color: #f5f7f8;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+	padding: 16px 0;
+}
+
+
+#pricing-table #pricing-table-footer {
+	text-align: center;	
+}
+
+#pricing-table #pricing-table-footer p {
+	font-size: 12px;
+	text-transform: uppercase;	
+}
+
+#pricing-table #pricing-table-footer a {
+	background: #50b7e4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #50b7e4 0%, #3098c4 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#50b7e4), color-stop(100%,#3098c4)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #50b7e4 0%,#3098c4 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #50b7e4 0%,#3098c4 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #50b7e4 0%,#3098c4 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #50b7e4 0%,#3098c4 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50b7e4', endColorstr='#3098c4',GradientType=0 ); /* IE6-9 */
+	background-color: #3ea6d2;
+	border: 1px solid #1481b0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #fff;
+	display: inline-block;
+	font-weight: bold;
+	margin-top: 10px;
+	padding: 10px;
+	text-decoration: none;
+}
+</style>
+
+<!--p id="demo"></p-->
+<div id="pricing-table">
+    <div id="pricing-table-header">
+        <h1>User</h1>
+    </div>
+    
+    <div id="pricing-table-content">
+        <ul id="lst">
+            
+          
+        </ul>
+    </div>
+</div>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    	alert("Calling XML");
+    	myFunction(this);
+    }
+};
+xhttp.open("GET", "test.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+	console.log("INSIDE");
+    var xmlDoc = xml.responseXML;
+    var x = xmlDoc.documentElement;
+    console.log(x.nodeName);
+    var y = x.firstChild;
+    //var fNode = xmlDoc.getElementsByTagName("user")[0]
+    //for (var )
+    var firstNode = xmlDoc.getElementsByTagName("user")[0];
+    console.log(firstNode);
+    var txt = "";
+    var filler = "";
+    for (var i = 0; i < firstNode.childNodes.length; i++) {
+        if (firstNode.childNodes[i].nodeType == 1) {
+            //Process only element nodes
+            var data = firstNode.childNodes[i].childNodes[0].nodeValue;
+            var filler = filler + "<li><strong>"+data+"</strong></li>";
+        }
+    }
+    console.log("VALUE:"+filler);
+    document.getElementById("lst").innerHTML = filler; 
+}
+</script>
+
+</body>
+</html> 
