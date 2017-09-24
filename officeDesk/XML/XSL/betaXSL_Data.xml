@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE users [
+   <!ELEMENT user (userName, RollNo, Phone)>
+   <!ELEMENT userName (#PCDATA) >
+   <!ELEMENT RollNo (#PCDATA)>
+   <!ELEMENT Phone ANY>
+   <!ELEMENT course (#PCDATA)>
+   <!ELEMENT courses (course+)>
+]>
+<?xml-stylesheet type="text/xsl" href="style.xsl" ?>
+<users>
+ <user>
+  <userName>amskee</userName>
+  <RollNo>15IT008</RollNo>
+  <Email>amskee@gmail.com</Email>
+  <Phone>8888888888</Phone>
+  <courses>
+    <course>Web development</course>
+    <course>Data Structures</course>
+    <course>Operating Systems</course>
+  </courses>
+
+ </user>
+ <user>
+  <userName>hari</userName>
+  <RollNo>15IT033</RollNo>
+  <Email>hari@gmail.com</Email>
+  <Phone>8888888888</Phone>
+  <courses>
+    <course>Distributed Systems</course>
+    <course>Data Structures</course>
+    <course>Operating Systems</course>
+  </courses>
+ </user>
+ <user>
+  <userName>Mahesh</userName>
+  <RollNo>15IT048</RollNo>
+  <Email>mahesh@gmail.com</Email>
+  <Phone>8888888888</Phone>
+  <courses>
+    <course>Data Mining</course>
+    <course>Operating Systems</course>
+    <course>Data Structures</course>
+  </courses>
+ </user>
+ <user>
+  <userName>Avinash</userName>
+  <RollNo>15IT017</RollNo>
+  <Email>avinash@gmail.com</Email>
+  <Phone>8888888888</Phone>
+  <courses>
+    <course>Data Mining</course>
+    <course>Operating Systems</course>
+    <course>Data Structures</course>
+  </courses>
+ </user>
+</users>
